@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Github, Linkedin, Mail, User, Briefcase, GraduationCap, FolderOpen } from "lucide-react"

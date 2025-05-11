@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from 'react';
 
 interface ScrollAnimationProps {
   children: React.ReactNode;
-  isTitle?: boolean;
 }
 
-export function ScrollAnimation({ children, isTitle = false }: ScrollAnimationProps) {
+export function ScrollAnimation({ children }: ScrollAnimationProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -21,13 +21,13 @@ export function ScrollAnimation({ children, isTitle = false }: ScrollAnimationPr
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
