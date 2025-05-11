@@ -475,7 +475,7 @@ export default async function Home({
                       <span className="text-[#2563EB] mt-1">•</span>
                       <span className="text-[#111827]">
                         {isEnglish
-                          ? "Tracking the leave processes of factory employees"
+                          ? "Follow-up of the leave processes of factory employees"
                           : "Fabrika çalışanlarının izin süreçlerinin takibi."
                         }
                       </span>
@@ -541,7 +541,7 @@ export default async function Home({
                       <span className="text-[#2563EB] mt-1">•</span>
                       <span className="text-[#111827]">
                         {isEnglish
-                          ? "Tracking the bank transactions"
+                          ? "Follow-up of the bank transactions"
                           : "Banka işlemlerinin takibi."
                         }
                       </span>
