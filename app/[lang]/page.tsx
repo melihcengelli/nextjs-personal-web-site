@@ -418,7 +418,7 @@ export default async function Home({
                       <span className="text-[#2563EB] mt-1">•</span>
                       <span className="text-[#111827]">
                         {isEnglish
-                          ? "Tracking finance processes"
+                          ? "Follow-up of finance processes"
                           : "Muhasebe ve Finans süreçlerinin takibi."
                         }
                       </span>
