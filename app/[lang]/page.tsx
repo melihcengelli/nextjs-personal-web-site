@@ -350,7 +350,7 @@ export default async function Home({
                   <p className="text-[#111827] leading-relaxed">
                     {isEnglish
                       ? "I gained experience in sales and marketing processes by working as a sales and marketing intern at an academic consultancy company in Alsancak, İzmir, for one month."
-                      : "Lisans mezuniyetimin ardından Satış ve Pazarlama süreçlerini deneyimlemek adına İzmir/Alsancak mahallesinde bulunan akademik danışmanlık firmasında 1 ay Staış ve Pazarlama stajyeri olarak görev aldım."
+                      : "Lisans mezuniyetimin ardından Satış ve Pazarlama süreçlerini deneyimlemek adına İzmir/Alsancak mahallesinde bulunan akademik danışmanlık firmasında 1 ay Satış ve Pazarlama stajyeri olarak görev aldım."
                     }
                   </p>
                   <ul className="space-y-2">
