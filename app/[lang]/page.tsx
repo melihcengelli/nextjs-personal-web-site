@@ -302,7 +302,7 @@ export default async function Home({
                 <div className="pl-4 space-y-2">
                   <p className="text-[#111827] leading-relaxed">
                     {isEnglish
-                      ? "I provided language support to engineers from abroad and factory workers in the construction process of a factory in the food and beverage industry in the Trakya region."
+                      ? "I provided language support to engineers from abroad and factory workers in the construction process of a factory in the food and beverage industry in the Thrace region."
                       : "Trakya bölgesinde yiyecek içecek sektöründe faaliyet gösteren bir şirketin fabrikasının kurulum sürecinde yurtışından gelen mühendisler ile fabrika çalışanları arasında anlaşabilmeleri için dil desteği sağladım."
                     }
                   </p>
