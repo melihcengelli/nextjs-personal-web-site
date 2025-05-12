@@ -6,6 +6,7 @@ import { TypewriterText } from "../components/TypewriterText"
 import { ScrollAnimation } from "../components/ScrollAnimation"
 import { ScrollToTop } from "../components/ScrollToTop"
 import Image from "next/image"
+import Link from "next/link"
 
 export async function generateStaticParams() {
     return [{ lang: "tr" }, { lang: "en" }];
@@ -25,7 +26,7 @@ export default async function Home({
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/background.png"
+            src="/tr/images/background.png"
             alt="Background"
             fill
             style={{ objectFit: 'cover' }}
@@ -47,8 +48,8 @@ export default async function Home({
                 delay={1000} 
               />
             </p>
-            <div className="flex gap-4">
-              <Button asChild className="bg-[#2563EB] text-white hover:bg-[#1d4ed8]">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button asChild className="bg-[#2563EB] text-white hover:bg-[#1d4ed8]">
                 <a href={`/${lang}#contact`}>
                   {isEnglish ? 'Contact Me' : 'İletişime Geç'}
                 </a>
@@ -62,6 +63,11 @@ export default async function Home({
                 <a href={`/${lang}#projects`}>
                   {isEnglish ? 'View Projects' : 'Projelerimi Gör'}
                 </a>
+              </Button>
+              <Button variant="outline" asChild className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#2563EB] transition-all duration-300">
+                <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+                  {lang === "tr" ? "CV" : "Resume"}
+                </Link>
               </Button>
             </div>
           </div>

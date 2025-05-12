@@ -32,6 +32,10 @@ const nextConfig = {
         source: '/en/images/:path*',
         destination: '/images/:path*',
       },
+      {
+        source: '/:lang/cv.pdf',
+        destination: '/cv.pdf',
+      },
     ];
   },
   async headers() {
@@ -56,12 +60,13 @@ const nextConfig = {
       },
     ];
   },
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-      type: 'asset/resource',
-    });
-    return config;
+  turbopack: {
+    rules: {
+      '*.png': ['asset'],
+      '*.jpg': ['asset'],
+      '*.gif': ['asset'],
+      '*.svg': ['asset'],
+    },
   },
 };
 
